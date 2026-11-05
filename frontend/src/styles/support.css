@@ -1,0 +1,143 @@
+.help-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0 48px;
+}
+
+.help-header {
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.help-eyebrow {
+  margin-bottom: 10px;
+  color: #45e0c1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.help-header h1 {
+  margin-bottom: 10px;
+  color: #f4f7fb;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.help-header > p:last-child {
+  color: #a9b5c8;
+  line-height: 1.6;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item,
+.support-card {
+  border: 1px solid #26344d;
+  border-radius: 12px;
+  background: rgba(19, 28, 47, 0.82);
+}
+
+.faq-item {
+  padding: 0 20px;
+}
+
+.faq-item summary {
+  padding: 18px 24px 18px 0;
+  color: #f4f7fb;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.faq-item summary::marker {
+  color: #45e0c1;
+}
+
+.faq-item p,
+.support-card p {
+  color: #a9b5c8;
+  line-height: 1.7;
+}
+
+.faq-item p {
+  padding-bottom: 12px;
+}
+
+.faq-item > a,
+.help-callout a {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #45e0c1;
+  font-weight: 600;
+}
+
+.help-callout {
+  margin-top: 28px;
+  color: #a9b5c8;
+  text-align: center;
+}
+
+.help-callout a {
+  margin: 0;
+}
+
+.support-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.support-card {
+  padding: 24px;
+}
+
+.support-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 18px;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(69, 224, 193, 0.12);
+  color: #45e0c1;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.support-card h2 {
+  margin-bottom: 10px;
+  color: #f4f7fb;
+  font-size: 1.15rem;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.support-card p {
+  min-height: 84px;
+  margin-bottom: 16px;
+}
+
+.support-action {
+  color: #45e0c1;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.support-action:hover,
+.faq-item > a:hover,
+.help-callout a:hover {
+  color: #38bdf8;
+}
+
+@media (max-width: 760px) {
+  .support-options {
+    grid-template-columns: 1fr;
+  }
+
+  .support-card p {
+    min-height: 0;
+  }
+}

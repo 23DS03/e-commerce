@@ -5,7 +5,6 @@ const connectDB = require('./config/db');
 const path = require('path');
 
 dotenv.config();
- connectDB();
 
 const app = express();
 
@@ -38,6 +37,14 @@ app.get("/", (req, res)=>{
 })
 
 
-app.listen(process.env.PORT, () =>{
-    console.log(`Server is started on port ${process.env.PORT}`);
+const startServer = async () => {
+    await connectDB();
+    app.listen(process.env.PORT, () =>{
+        console.log(`Server is started on port ${process.env.PORT}`);
+    })
+}
+
+startServer().catch((err) => {
+    console.error("Backend startup failed:", err.message);
+    process.exit(1);
 })
